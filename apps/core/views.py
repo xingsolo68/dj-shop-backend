@@ -1,9 +1,9 @@
-from apps.store.models import Category, Product
+from apps.store.models import Product
 from django.shortcuts import render
 
 
 # Create your views here.
-def frontpage(request):
+def frontpage(request):  # noqa: ANN201, D103
     products = Product.objects.all()
 
     context = {"products": products}
